@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { styled } from "styled-components";
+import Header from "./components/Header";
+import Menu from "./components/Menu";
+import plantaMain from "./img/planta-main.svg"
 
-function App() {
+const Home = styled.main`
+  width: 100vw;
+  height: 100vh;
+  background-image: url(${plantaMain});
+  background-repeat: no-repeat;
+  background-position: 61% -20%;
+`
+
+function HomePage() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Home>
+        <Menu />
+      </Home>
+    </>
   );
 }
 
-export default App;
+export default HomePage;
